@@ -1,10 +1,7 @@
 = form_for @item do |f|
   - if @item.errors.any?
     div class='alert-error' #error_explanation
-      h2 = "#{pluralize(@item.errors.count, "error")} prohibited this item from being saved:"
-      ul
-        - @item.errors.full_messages.each do |message|
-          li = message
+      h2 = "#{pluralize(@item.errors.count, "error")} Não pode ficar em branco!"
 
   .input-field
     = f.label :Código
