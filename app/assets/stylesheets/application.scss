@@ -1,0 +1,73 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "materialize";
+
+body{
+	background-color: #ffffb3;
+}
+.navbar-color{
+	background-color: #99ff66;
+}
+
+
+.button {
+  	-moz-box-shadow: 0px 0px 0px 0px #3dc21b;
+	-webkit-box-shadow: 0px 0px 0px 0px #3dc21b;
+	box-shadow: 0px 0px 0px 0px #3dc21b;
+	background-color:#bfff80;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border: none;
+	border-radius:20px;
+	display:inline-block;
+	cursor:pointer;
+	color:#473c47;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:16px 31px;
+	text-decoration:none;
+}
+.button:hover {
+    background-color: #ccff99;
+    box-shadow: 0 12px 12px 0 rgba(0,0,0,0.24), 0 17px 20px 0 rgba(0,0,0,0.19);
+}
+
+.blocotexto {
+  margin: 20px 0;
+  padding-left: 1.5rem;
+  border-left: 5px solid #1a6600;
+}
+
+.link{
+	font-color:white !important;
+	background-color:transparent !important;
+}
+.link:hover{
+	background-color:#aaff80 !important;
+}
+
+.alert-error {
+    background: #FFF6BF !important;
+	border-top: 2px solid #FFD324 !important;
+	border-bottom: 2px solid #FFD324 !important;
+	border-left: none !important;
+	border-right: none !important;
+	text-align: center !important;
+	margin: 10px auto !important;
+	padding: 5px 20px !important;
+	font-size: 18px !important;
+ }

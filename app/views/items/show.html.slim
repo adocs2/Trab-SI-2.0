@@ -1,0 +1,19 @@
+div class='container'
+	p#notice = notice
+
+	p
+	  strong Código:
+	  = @item.code
+	p
+	  strong Demanda:
+	  = @item.demand
+	p
+	  strong Descrição:
+	  = @item.description
+	p
+	  strong Unidades:
+	  = @item.units
+
+	= link_to 'Editar', edit_item_path(@item), :class => "button"
+	'|
+	= link_to 'Voltar', items_path, :class => "button"

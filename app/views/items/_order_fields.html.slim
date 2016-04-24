@@ -1,0 +1,8 @@
+div class="container"	
+	.nested-fields
+	  = f.label :Período
+	  = f.number_field :period
+	  = f.label :Demanda
+	  = f.number_field :demand
+	  = link_to_remove_association "Remover pedido", f, :class => 'button'
+	br

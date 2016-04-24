@@ -1,0 +1,9 @@
+div class='container'
+	h1 align='center' Editar produto
+
+	== render 'form'
+
+	= link_to 'Detalhes', @item, :class =>"button"
+	| |
+	= link_to 'Voltar', items_path, :class =>"button"
+

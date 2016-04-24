@@ -1,0 +1,26 @@
+div class='container'
+	h1 align='center'
+		| Relatorio de Situação de Estoque
+
+	p
+		| Horário: 
+		= Time.now
+
+	table
+
+		thead
+			tr
+				th Código
+				th Produto
+				th Unidades
+				th Demanda
+				th Estoque mínimo
+
+		tbody
+			- @items.each do |item|
+				tr
+					td = item.code
+					td = item.description
+					td = item.units
+					td = item.demand
+					td = item.minimum_stock

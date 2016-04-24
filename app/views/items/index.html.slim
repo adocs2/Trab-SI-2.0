@@ -1,0 +1,31 @@
+div class='container'
+  h1 align='center' Lista de produtos
+
+  table
+    thead
+      tr
+        th Códido
+        th Demanda
+        th Descrição
+        th Unidades
+        th Estoque mínimo
+        th
+        th
+        th
+
+    tbody
+      - @items.each do |item|
+        tr
+          td = item.code
+          td = item.demand
+          td = item.description
+          td = item.units
+          td = item.minimum_stock
+          td = link_to 'Show', item, :class => "button"
+          td = link_to 'Edit', edit_item_path(item), :class => "button"
+          td = link_to 'Destroy', item, data: {:confirm => 'Are you sure?'}, :class => "button", :method => :delete
+
+  br
+  = link_to 'Novo produto', new_item_path, :class =>"button"
+  |  | 
+  = link_to 'Gerar relatório', report_path, :class => "button"

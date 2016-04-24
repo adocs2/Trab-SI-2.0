@@ -1,0 +1,29 @@
+= form_for @item do |f|
+  - if @item.errors.any?
+    div class='alert-error' #error_explanation
+      h2 = "#{pluralize(@item.errors.count, "error")} prohibited this item from being saved:"
+      ul
+        - @item.errors.full_messages.each do |message|
+          li = message
+
+  .input-field
+    = f.label :Código
+    = f.number_field :code
+  .input-field
+    = f.label :Demanda
+    = f.number_field :demand
+  .input-field
+    = f.label :Descrição
+    = f.text_field :description
+  .input-field
+    = f.label :Unidades
+    = f.number_field :units
+
+  = f.fields_for :orders do |order|
+    = render 'order_fields', :f => order
+  .links
+    = link_to_add_association 'Adicionar pedido', f, :orders, :class => "button"
+  br
+  .actions
+  = f.submit 'Criar produto', :class => 'button'
+br

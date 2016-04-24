@@ -1,0 +1,10 @@
+.container
+  .center-align.flow-text
+    h1
+      | Olá!
+  br
+  h4.flow-text.blocotexto
+    | Seja bem-vindo ao Sistema de controle de estoque!
+  br
+  .center-align
+    =link_to 'Produtos', {:controller => 'items', :action => 'index'}, :class =>'button'
