@@ -1,7 +1,7 @@
 = form_for @item do |f|
   - if @item.errors.any?
     div class='alert-error'
-      h2 = "#{pluralize(@item.errors.count, "error")} Não pode ficar em branco!"
+      h4 = "#{pluralize(@item.errors.count, "error")}: Não pode ficar em branco!"
 
   .input-field
     = f.label :Código
